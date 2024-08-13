@@ -1,8 +1,8 @@
 export default function HomePage() {
     return (
-        <div className="bg-gray-800 text-center">
+        <div className="text-center my-32">
             <h1>Hello, world!</h1>
-            <p>Welcome to your new Next.js app.</p>
+            <p>This is the home page</p>
         </div>
     );
     }

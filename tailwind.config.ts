@@ -13,6 +13,18 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      colors: {
+        chikYellow:"#FDE4A2",
+        chikCaqui100:"#EDD6B6",
+        chikCaqui200:"#CAB0A1",
+        chikCaqui300:"#ABB168",
+        chikBrown100:"#7E5330",
+        chikBrown200:"#472607",
+        chikBrown300:"#4E3135",
+        gray100:"#FAFAFA",
+        gray200:"#F6F6F6",
+        gray300:"#A9A9A9",
+      }
     },
   },
   plugins: [],
