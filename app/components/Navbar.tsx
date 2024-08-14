@@ -1,51 +1,97 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
 import logo from '/public/images/logoletter.png';
 import english from '/public/images/english.png';
 import spanish from '/public/images/spanish.png';
+import { useState } from 'react';
+import {
+  Bars3Icon
+} from '@heroicons/react/24/outline';
 
-// Define props for NavbarOption
-interface NavbarOptionProps {
-  section: string;
-  refer: string;
-}
+import Link from 'next/link';
 
-// NavbarOption component
-const NavbarOption: React.FC<NavbarOptionProps> = ({ section, refer }) => {
-  return (
-    <li className="bg-white hover:bg-chikCaqui100 text-chikCaqui200 hover:text-chikBrown100 px-2 py-1 rounded-md transition-all ">
-      <a href={`#${refer}`}>{section}</a>
-    </li>
-  );
-};
+
+
+const links = [
+  { name: 'Inicio', href: '/'},
+  { name: 'Carta', href: '/menu'},
+  { name: 'Contacto', href: '/contacto'}
+]
+
 
 // Navbar component
 const Navbar: React.FC = () => {
+
+  const [isOpen, setIsOpen] = useState(false);
+  
+  function toggleMenu(){
+    setIsOpen(!isOpen);
+    console.log(isOpen);
+  }
+
   return (
-    <div className='fixed top-0 w-full bg-white z-30 drop-shadow-md'>
-      <nav className="flex justify-between gap-4 items-center px-16 py-2">
-        <div className='left-panel flex gap-4'>
-          <a href="#hero" className='flex items-center justify-center'>
-            <Image 
-                src={logo}
-                alt="logo"
-                className="mr-10 hidden lg:block"
-                width={140} 
-                height={120}
-             />
-          </a>
-          <ul className="flex space-x-12 font-bold text-2xl">
-            <NavbarOption section="About" refer="about" />
-            <NavbarOption section="Skills" refer="skills" />
-            <NavbarOption section="Projects" refer="projects" />
-            <NavbarOption section="Contacts" refer="contacts" />
-          </ul>
-        </div>
-        <div>
-          <p className='font-bold text-2xl "bg-white hover:bg-chikCaqui100 text-chikCaqui200 hover:text-chikBrown100 px-2 py-1 rounded-md transition-all cursor-pointer'>EN</p>
-        </div>
-      </nav>
-    </div>
+    <>
+    <nav className="absolute top-0 w-full bg-white z-30 drop-shadow-md flex justify-between gap-4 items-center px-2 py-2">
+      <div onClick={toggleMenu} className='burger-menu lg:hidden cursor-pointer text-black hover:text-chikBrown100'>
+        <Bars3Icon className='size-10'/>
+      </div>
+      <div className='left-panel flex md:ml-10'>
+        <Link href="/" className='flex items-center justify-center'>
+          <Image 
+              src={logo}
+              alt="logo"
+              className="lg:mr-14 ml-8"
+              width={160} 
+              height={140}
+            />
+        </Link>
+        <ul className="hidden lg:flex space-x-12 font-bold text-2xl">
+          {
+            links.map((link) => {
+              return(
+              <Link 
+                key={link.name}
+                href={link.href}
+                className='bg-white hover:bg-chikCaqui100 text-chikCaqui200 hover:text-chikBrown100 px-2 py-1 rounded-md transition-all'>
+                  <h1>{link.name}</h1>
+              </Link>
+              )
+            })
+          }
+        </ul>
+      </div>
+      <div className='right-panel md:mr-10  flex gap-2 items-center "bg-white hover:bg-chikCaqui100 text-chikCaqui200 hover:text-chikBrown100 px-2 py-1 rounded-md transition-all cursor-pointer'>
+        <Image 
+          src={english}
+          alt='english'
+          className='block'
+          width={25}
+          height={25}
+        />
+        <p className='font-bold text-2xl'>EN</p>
+      </div>
+      { isOpen && (
+      <div className="absolute top-16 left-1/2 transform -translate-x-1/2 rounded-xl lg:hidden bg-white text-center w-7/12 p-4 drop-shadow-md">
+        <ul className="flex flex-col space-y-4 font-bold text-2xl">
+          {links.map((link) => (
+            <Link 
+              key={link.name}
+              href={link.href}
+              className='hover:bg-chikCaqui100 text-chikCaqui200 hover:text-chikBrown100 px-2 py-1 rounded-md transition-all'
+              onClick={toggleMenu}>
+              <h1>{link.name}</h1>
+            </Link>
+          ))}
+        </ul>
+      </div>
+      )} 
+
+    </nav>
+
+    
+    </>
   );
 }
 

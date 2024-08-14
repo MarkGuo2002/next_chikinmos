@@ -3,6 +3,7 @@ import { Inria_Sans } from "next/font/google";
 import "./globals.css";
 
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer"
 import Head from "next/head";
 
 const inria = Inria_Sans({
@@ -22,9 +23,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head></head>
-      <body className={inria.className}>
+      <body className={`${inria.className} flex flex-col min-h-screen`}>
         <Navbar />
-        {children}
+        <div className="main-container py-24 flex-grow flex justify-center">
+          {children}
+        </div>
+        <Footer />
       
       </body>
     </html>
