@@ -24,17 +24,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head></head>
-      <body className={`${inria.className} flex flex-col min-h-screen relative overflow-hidden`}>
+      <body className={`${inria.className} flex flex-col min-h-screen relative overflow-x-hidden`}>
         <Image
           src={bgChikin}
           alt="bg chicken"
-          className="absolute z-0 opacity-5 top-40 -right-48 -rotate-12"
+          className="fixed z-0 opacity-5 top-40 right-0"
           width={600}
           height={600}
         />
 
         <Navbar />
-        <div className="main-container py-24 flex-grow flex justify-center">
+        <div className="main-container z-10 py-24 px-4 flex-grow flex justify-center">
           {children}
         </div>
         <Footer />

@@ -15,9 +15,9 @@ import Link from 'next/link';
 
 
 const links = [
-  { name: 'Inicio', href: '/'},
+  { name: 'Inicio', href: '/'}, 
   { name: 'Carta', href: '/menu'},
-  { name: 'Contacto', href: '/contacto'}
+  { name: 'Contacto', href: '/contact'}
 ]
 
 
@@ -70,7 +70,7 @@ const Navbar: React.FC = () => {
           width={25}
           height={25}
         />
-        <p className='font-bold text-2xl'>EN</p>
+        <h1 className='font-bold text-2xl'>EN</h1>
       </div>
       { isOpen && (
       <div className="absolute top-16 left-1/2 transform -translate-x-1/2 rounded-xl lg:hidden bg-white text-center w-7/12 p-4 drop-shadow-md">

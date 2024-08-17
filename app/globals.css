@@ -25,8 +25,19 @@ p {
   color: #472607;
 }
 
+.subtext {
+  color: #A9A9A9;
+}
+
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@layer components {
+  .title {
+    @apply text-5xl font-bold text-chikBrown300;
   }
 }
