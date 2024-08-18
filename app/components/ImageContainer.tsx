@@ -6,7 +6,6 @@ interface ImageContainerProps {
     src: string | StaticImageData;
     decoration?: string | StaticImageData | null;
     side?: Side | null;
-    caption?: string | null;
     alt?: string;
 }
 
@@ -14,20 +13,18 @@ const ImageContainer: React.FC<ImageContainerProps> = ({
     src,
     decoration = null,
     side = null,
-    caption = null,
     alt = "Default alt"
 }) => {
     const size = "w-96 h-96 lg:w-80 lg:h-80";
     const position = `-${side}-0`
     return (
-        <div className={` w-[28rem] h-[24rem] image-container relative flex-shrink-0 overflow-hidden rounded-3xl shadow-xl border-4 border-chikBrown200`}>
+        <div className={` w-full h-[24rem] image-container relative flex-shrink-0 overflow-hidden rounded-3xl shadow-xl border-4 border-chikBrown200`}>
             <Image
                 className="object-cover brightness-100 hover:scale-110 hover:brightness-50 transition-all duration-500 ease-in-out"
                 loading="lazy"
                 src={src}
                 alt={alt}
-                objectFit="cover"
-                layout="fill"
+                fill
             />
             
             {decoration && (
@@ -39,11 +36,6 @@ const ImageContainer: React.FC<ImageContainerProps> = ({
                     width={200}
                     height={200} 
                 />
-            )}
-            {caption && (
-                <p className="text-center text-base font-medium italic py-2 text-zinc-700">
-                    {caption}
-                </p>
             )}
         </div>
     );

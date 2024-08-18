@@ -14,6 +14,7 @@ export default function Page() {
                     address="Calle General Díaz Porlier 38 28001"
                     phone="666 888 888"
                     mail="chikinmos@gmail.com"
+                    link="https://www.google.com/maps/place/Chikinmos/@40.4283983,-3.6794126,17z/data=!3m1!4b1!4m6!3m5!1s0xd422930a2d38487:0x3335d0084940135c!8m2!3d40.4283942!4d-3.6768377!16s%2Fg%2F11vjk107ns?entry=ttu"
                 />
 
                 <RestaurantCard
@@ -22,6 +23,7 @@ export default function Page() {
                     address="Calle Lorem Ipsum 38 28001"
                     phone="666 888 888"
                     mail="chikinmos2@gmail.com"
+                    link="https://www.google.com/maps/place/Chikinmos/@40.4283983,-3.6794126,17z/data=!3m1!4b1!4m6!3m5!1s0xd422930a2d38487:0x3335d0084940135c!8m2!3d40.4283942!4d-3.6768377!16s%2Fg%2F11vjk107ns?entry=ttu"
                 />
             </div>
         </div>
