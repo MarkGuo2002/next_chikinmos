@@ -1,16 +1,19 @@
 'use client';
 
 import React from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
+
+import Link from 'next/link';
 import logo from '/public/images/logoletter.png';
 import english from '/public/images/english.png';
 import spanish from '/public/images/spanish.png';
-import { useState } from 'react';
+
 import {
   Bars3Icon
 } from '@heroicons/react/24/outline';
 
-import Link from 'next/link';
 
 
 
@@ -23,7 +26,8 @@ const links = [
 
 // Navbar component
 const Navbar: React.FC = () => {
-
+  const pathname = usePathname();
+  console.log("current pathname:" + pathname)
   const [isOpen, setIsOpen] = useState(false);
   
   function toggleMenu(){
@@ -54,7 +58,7 @@ const Navbar: React.FC = () => {
               <Link 
                 key={link.name}
                 href={link.href}
-                className='bg-white hover:bg-chikCaqui100 text-chikCaqui200 hover:text-chikBrown100 px-2 py-1 rounded-md transition-all'>
+                className={`${pathname === link.href ? "bg-chikCaqui100 text-chikBrown100" : "bg-white text-chikCaqui200 hover:bg-chikCaqui100 hover:text-chikBrown100  transition-all"} px-2 py-1 rounded-md`}>
                   <h1>{link.name}</h1>
               </Link>
               )

@@ -21,10 +21,6 @@ body {
   background: #FAFAFA;
 }
 
-p {
-  color: #472607;
-}
-
 .subtext {
   color: #A9A9A9;
 }
@@ -38,9 +34,12 @@ p {
 
 @layer components {
   .title {
-    @apply text-5xl font-bold text-chikBrown300;
+    @apply text-3xl md:text-5xl font-bold text-chikBrown300;
   }
   .absolute-center{
     @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
+  }
+  p{
+    @apply text-chikBrown200 text-base lg:text-xl
   }
 }
