@@ -15,6 +15,7 @@ const config: Config = {
       },
       colors: {
         chikYellow:"#FDE4A2",
+        chikCaqui000:"#fcf3e9",
         chikCaqui100:"#EDD6B6",
         chikCaqui200:"#CAB0A1",
         chikCaqui300:"#ABB168",

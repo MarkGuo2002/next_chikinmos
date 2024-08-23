@@ -18,12 +18,13 @@
 
 body {
   color: black ;
-  background: #FAFAFA;
+  background: #FFFFFF;
 }
 
 .subtext {
   color: #A9A9A9;
 }
+
 
 
 @layer utilities {
@@ -40,6 +41,13 @@ body {
     @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
   }
   p{
-    @apply text-chikBrown200 text-base lg:text-xl
+    @apply text-chikBrown100 text-base lg:text-xl
+  }
+  h1{
+    @apply text-chikBrown200 text-xl lg:text-2xl font-bold
+  }
+
+  .icon-css {
+    @apply w-6 h-6
   }
 }

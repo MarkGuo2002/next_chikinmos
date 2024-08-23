@@ -19,8 +19,8 @@ import {
 
 const links = [
   { name: 'Inicio', href: '/'}, 
-  { name: 'Carta', href: '/menu'},
-  { name: 'Contacto', href: '/contact'}
+  { name: 'Contacto', href: '/contact'},
+  { name: 'FAQ', href: '/faq'}
 ]
 
 

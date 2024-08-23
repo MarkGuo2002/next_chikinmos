@@ -1,11 +1,3 @@
-import Image from "next/image";
-import {
-  MapPinIcon,
-  PhoneIcon,
-  EnvelopeIcon,
-} from "@heroicons/react/24/outline";
-import ImageContainer from "../components/ImageContainer";
-
 import RestaurantCard from "../components/contact/RestaurantCard";
 const exampleImagePath = "/images/example.png";
 const deco = "/images/deliciouswings.png";
@@ -14,10 +6,10 @@ const deco = "/images/deliciouswings.png";
 export default function Page() {
   return (
     <div className="flex flex-col items-center w-full gap-4 text-center p-4">
-      <h1 className="text-3xl font-bold text-chikBrown200">
+      <h1 className="title">
         Contacta con nosotros
       </h1>
-      <p className="text-chikBrown200">
+      <p>
         Si tiene alguna pregunta o inquietud, comuníquese con nosotros mediante
         el número de teléfono o el correo electrónico.
       </p>
