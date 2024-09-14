@@ -80,13 +80,13 @@ const Navbar: React.FC = () => {
         </a>
         <div className='md:mr-10  flex gap-2 items-center "bg-white hover:bg-chikCaqui100 text-chikCaqui200 hover:text-chikBrown100 px-2 py-1 rounded-md transition-all cursor-pointer'>
           <Image 
-            src={english}
+            src={spanish}
             alt='english'
             className='block'
             width={25}
             height={25}
           />
-          <h1 className='font-bold text-2xl'>EN</h1>
+          <h1 className='font-bold text-2xl'>ES</h1>
         </div>
       </div>
       
@@ -97,7 +97,7 @@ const Navbar: React.FC = () => {
             <Link 
               key={link.name}
               href={link.href}
-              className='hover:bg-chikCaqui100 text-chikCaqui200 hover:text-chikBrown100 px-2 py-1 rounded-md transition-all hover:scale-105'
+              className={`${pathname === link.href ? "bg-chikCaqui100 text-chikBrown100" : "bg-white text-chikCaqui200 hover:bg-chikCaqui100 hover:text-chikBrown100  transition-all"} px-2 py-1 rounded-md hover:scale-105`}
               onClick={toggleMenu}>
               <h2>{link.name}</h2>
             </Link>
