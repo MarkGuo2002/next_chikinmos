@@ -20,7 +20,7 @@ const FaqItem: React.FC<FaqItemProps> = ({ question, answer }) => {
             aria-expanded={isExpanded}
         >
             <div className="question flex justify-between items-center gap-2">
-                <h1>{question}</h1>
+                <h2>{question}</h2>
                 <div className="flex-shrink-0">
                     {isExpanded ? (
                         <MinusIcon className="icon-css" />

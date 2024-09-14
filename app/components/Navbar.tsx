@@ -11,7 +11,8 @@ import english from '/public/images/english.png';
 import spanish from '/public/images/spanish.png';
 
 import {
-  Bars3Icon
+  Bars3Icon,
+  ArrowDownTrayIcon
 } from '@heroicons/react/24/outline';
 
 
@@ -51,7 +52,7 @@ const Navbar: React.FC = () => {
               height={140}
             />
         </Link>
-        <ul className="hidden lg:flex space-x-12 font-bold text-2xl">
+        <ul className="hidden lg:flex space-x-12 font-bold text-xl">
           {
             links.map((link) => {
               return(
@@ -59,35 +60,56 @@ const Navbar: React.FC = () => {
                 key={link.name}
                 href={link.href}
                 className={`${pathname === link.href ? "bg-chikCaqui100 text-chikBrown100" : "bg-white text-chikCaqui200 hover:bg-chikCaqui100 hover:text-chikBrown100  transition-all"} px-2 py-1 rounded-md`}>
-                  <h1>{link.name}</h1>
+                  <h2>{link.name}</h2>
               </Link>
               )
             })
           }
         </ul>
       </div>
-      <div className='right-panel md:mr-10  flex gap-2 items-center "bg-white hover:bg-chikCaqui100 text-chikCaqui200 hover:text-chikBrown100 px-2 py-1 rounded-md transition-all cursor-pointer'>
-        <Image 
-          src={english}
-          alt='english'
-          className='block'
-          width={25}
-          height={25}
-        />
-        <h1 className='font-bold text-2xl'>EN</h1>
+      
+
+      <div className='right-panel flex gap-4 '>
+        <a 
+          className="lg:flex items-center justify-center hidden bg-chikCaqui000 gap-2 px-4 py-1 border-2 border-chikBrown100 cursor-pointer rounded-full hover:bg-chikBrown100 transition-all duration-300 ease-in-out text-chikBrown100 hover:text-white group"
+          href='/dummypdf.pdf'
+          download
+        >
+          <ArrowDownTrayIcon className='size-5'/>
+          <p className='group-hover:text-white font-bold'>Carta</p>
+        </a>
+        <div className='md:mr-10  flex gap-2 items-center "bg-white hover:bg-chikCaqui100 text-chikCaqui200 hover:text-chikBrown100 px-2 py-1 rounded-md transition-all cursor-pointer'>
+          <Image 
+            src={english}
+            alt='english'
+            className='block'
+            width={25}
+            height={25}
+          />
+          <h1 className='font-bold text-2xl'>EN</h1>
+        </div>
       </div>
+      
       { isOpen && (
-      <div className="absolute top-16 left-1/2 transform -translate-x-1/2 rounded-xl lg:hidden bg-white text-center w-7/12 p-4 drop-shadow-md">
+      <div className="absolute top-16 left-1/2 transform -translate-x-1/2 rounded-xl lg:hidden bg-white text-center w-9/12 md:w-6/12 p-4 drop-shadow-md">
         <ul className="flex flex-col space-y-4 font-bold text-2xl">
           {links.map((link) => (
             <Link 
               key={link.name}
               href={link.href}
-              className='hover:bg-chikCaqui100 text-chikCaqui200 hover:text-chikBrown100 px-2 py-1 rounded-md transition-all'
+              className='hover:bg-chikCaqui100 text-chikCaqui200 hover:text-chikBrown100 px-2 py-1 rounded-md transition-all hover:scale-105'
               onClick={toggleMenu}>
-              <h1>{link.name}</h1>
+              <h2>{link.name}</h2>
             </Link>
           ))}
+            <a
+              className='hover:bg-chikCaqui200 bg-chikCaqui100 px-2 py-1 rounded-full transition-all cursor-pointer flex items-center justify-center gap-2 border-2 border-chikBrown200'
+              href='/dummypdf.pdf'
+              download
+            >
+            <ArrowDownTrayIcon className='size-5 text-chikBrown300'/>
+            <p className='text-chikBrown300 hover:text-chikBrown100 text-xl font-bold'>Nuestra Carta </p>
+          </a>
         </ul>
       </div>
       )} 

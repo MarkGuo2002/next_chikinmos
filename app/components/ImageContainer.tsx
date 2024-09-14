@@ -22,21 +22,21 @@ const ImageContainer: React.FC<ImageContainerProps> = ({
     let position;
     switch (side){
         case 'tr':
-            position = '-top-10 -right-10'
+            position = '-top-10 -right-5'
             break;
         case 'tl':
-            position = '-top-10 -left-10'
+            position = '-top-10 -left-5'
             break;
         case 'br':
-            position = '-bottom-10 -right-10'
+            position = '-bottom-10 -right-5'
             break;
         case 'bl':
-            position = '-bottom-10 -left-10'
+            position = '-bottom-10 -left-5'
             break;
 
     }
     return (
-        <div className='relative w-full h-full group'>
+        <div className='relative w-full h-auto group'>
                 <div className={` w-full h-full relative flex-shrink-0 overflow-hidden rounded-3xl shadow-xl border-4 border-chikBrown200 `}>
                     <Image
                         className="group-hover:scale-110 transition-all duration-500 ease-in-out"
@@ -54,8 +54,8 @@ const ImageContainer: React.FC<ImageContainerProps> = ({
                     loading="lazy"
                     src={decoration}
                     alt="Decoration"
-                    width={100}
-                    height={100} 
+                    width={80}
+                    height={80} 
                 />
             )}
         

@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import { Inria_Sans } from "next/font/google";
 import "./globals.css";
-import Image from "next/image";
+import BgDecorations from "./components/BgDecorations";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer"
 
-import bgChikin from "/public/images/chikinminimalist.png";
+
 
 const inria = Inria_Sans({
     subsets: ["latin"],
@@ -25,13 +25,8 @@ export default function RootLayout({
     <html lang="en">
       <head></head>
       <body className={`${inria.className} flex flex-col min-h-screen relative overflow-x-hidden`}>
-        <Image
-          src={bgChikin}
-          alt="bg chicken"
-          className="fixed z-0 opacity-5 top-40 right-0"
-          width={600}
-          height={600}
-        />
+        <BgDecorations />
+        
 
         <Navbar />
         <div className="main-container z-10 py-24 px-4 flex-grow flex justify-center">
