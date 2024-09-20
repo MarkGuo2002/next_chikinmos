@@ -1,28 +1,28 @@
-import { ArrowLongDownIcon } from "@heroicons/react/24/outline";
 import ImageContainer from "../ImageContainer";
 import Image from "next/image";
 
 const exampleImagePath = "/images/example.png";
-const fried = "/decorations/fried-chicken.png";
-const dumpling = "/decorations/dumplings.png";
+const beer = "/decorations/beer.png";
+const wings = "/decorations/fried-chicken.png"
 const spicy = "/images/hothothot.png";
-const bixin = "/images/bixin.png"
 
 
 export default function HomeContent(){
     return(
-        <div className="w-full flex flex-col gap-24 items-center justify-center px-2 lg:px-32">
-            <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-12 h-auto items-stretch">
-                <div className="md:col-span-1 ">
-                    <Image
-                        src={dumpling}
-                        className="scale-x-[-1] px-36 md:px-24"
-                        width={1920}
-                        height={1080}
+        <div className="w-full flex flex-col gap-12 items-center justify-center px-2 lg:px-32">
+            <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-12 h-auto">
+                <div className="md:col-span-1">
+                    <ImageContainer
+                        src={exampleImagePath}
+                        w={1920}
+                        h={1080}
                         alt="Home image 1"
+                        decoration={beer}
+                        side={"tr"}
                     />
+                    <p className="subtitle">Alitas bien ricas 😋</p>
                 </div>
-                <div className="description-container md:col-span-2 h-full">
+                <div className="description-container md:col-span-2">
                     <h2>Lorem Ipsum!</h2>
                     <h1>Todo 100% Hecho a mano</h1>
                     <p className="mt-4">Desde su apertura en 2023, Chikinmos se ha convertido en el destino favorito de los amantes del auténtico pollo frito coreano en Madrid. Ubicado en el corazón de la ciudad, nuestro restaurante ofrece una experiencia gastronómica única que combina tradición y sabor en cada bocado.
@@ -32,7 +32,7 @@ export default function HomeContent(){
                 </div>
             </div>
         
-            <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-12 h-full">
+            <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-12 h-auto">
                 <div className="description-container order-2 md:order-1 md:col-span-2">
                     <h2>Ven con tus amig@s</h2>
                     <h1>¿Seguro que te lo vas a perder?</h1>
@@ -41,18 +41,17 @@ export default function HomeContent(){
 
                 </div>
                 <div className="order-1 md:order-2 description-container md:col-span-1">
-                <Image
-                        src={fried}
-                        className="px-36 md:px-24"
-                        width={1920}
-                        height={1080}
+                    <ImageContainer
+                        src={exampleImagePath}
+                        w={1920}
+                        h={1080}
                         alt="Home image 1"
+                        decoration={wings}
+                        side={"tl"}
                     />
+                    <p className="subtitle">Bibimbap 😋</p>
                 </div>
             </div>
-            <ArrowLongDownIcon className="w-12 h-12 text-chikBrown200 animate-pulse font-bold mt-12"/>
-
-
             <div className="w-full lg:w-5/12 mt-12 ending-container flex items-center justify-center gap-4 ">
                 <div className="w-1/3">
                     <Image

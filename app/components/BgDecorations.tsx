@@ -32,16 +32,16 @@ export default function BgDecorations() {
             width={100}
             height={100}
         />
-        <Image
-            src={wings}
-            alt="wings"
-            className="fixed z-0 opacity-5 top-1/2 right-3/4 w-20 h-16"
-            width={600}
-            height={600}
-        />
 
 
         <div className="hidden lg:block">
+            <Image
+                src={wings}
+                alt="wings"
+                className="fixed z-0 opacity-5 top-1/2 right-3/4 w-20 h-16"
+                width={600}
+                height={600}
+            />
             <Image
                 src={star}
                 alt="star"

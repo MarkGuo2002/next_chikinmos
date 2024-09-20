@@ -7,6 +7,10 @@ import {
     PhoneIcon,
     EnvelopeIcon,
   } from '@heroicons/react/24/outline';
+
+  import {
+    MapIcon
+  } from '@heroicons/react/24/solid';
   
 
 interface RestaurantCardProps {
@@ -23,9 +27,10 @@ const RestaurantCard: React.FC<RestaurantCardProps> = ({ title, image, address, 
         <div className="flex flex-col items-center gap-4 w-full">
             <h2 className="text-2xl font-bold text-chikBrown200">{title}</h2>
             <a href={link} target="_blank" rel="noopener noreferrer" className="w-full h-full relative cursor-pointer group">
-                <p className="pointer-events-none absolute-center z-10 text-3xl text-white opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out transform translate-y-4 group-hover:-translate-y-4">
-                    Abrir en Google Maps
-                </p>
+                <div className="pointer-events-none absolute-center z-10 text-3xl text-white opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out transform translate-y-4 group-hover:-translate-y-10 flex flex-col items-center justify-center">
+                    <MapIcon className="size-8"/>
+                    <p className="text-white text-xl text-bold">Cómo llegar</p>
+                </div>
                 <div className="group-hover:brightness-75 transition-all duration-500 ease-in-out">
                     <ImageContainer
                         src={image}

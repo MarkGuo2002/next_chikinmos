@@ -7,16 +7,15 @@ import { usePathname } from 'next/navigation';
 
 import Link from 'next/link';
 import logo from '/public/images/logoletter.png';
-import english from '/public/images/english.png';
-import spanish from '/public/images/spanish.png';
 
 import {
   Bars3Icon,
   ArrowDownTrayIcon
 } from '@heroicons/react/24/outline';
+import LanguageButton from './LanguageButton';
 
 
-
+const menuPDF = "/menu.pdf"
 
 const links = [
   { name: 'Inicio', href: '/'}, 
@@ -72,22 +71,14 @@ const Navbar: React.FC = () => {
       <div className='right-panel flex gap-4 '>
         <a 
           className="lg:flex items-center justify-center hidden bg-chikCaqui000 gap-2 px-4 py-1 border-2 border-chikBrown100 cursor-pointer rounded-full hover:bg-chikBrown100 transition-all duration-300 ease-in-out text-chikBrown100 hover:text-white group"
-          href='/dummypdf.pdf'
+          href={menuPDF}
           download
         >
           <ArrowDownTrayIcon className='size-5'/>
           <p className='group-hover:text-white font-bold'>Carta</p>
         </a>
-        <div className='md:mr-10  flex gap-2 items-center "bg-white hover:bg-chikCaqui100 text-chikCaqui200 hover:text-chikBrown100 px-2 py-1 rounded-md transition-all cursor-pointer'>
-          <Image 
-            src={spanish}
-            alt='english'
-            className='block'
-            width={25}
-            height={25}
-          />
-          <h1 className='font-bold text-2xl'>ES</h1>
-        </div>
+       
+       <LanguageButton />
       </div>
       
       { isOpen && (
@@ -104,7 +95,7 @@ const Navbar: React.FC = () => {
           ))}
             <a
               className='hover:bg-chikCaqui200 bg-chikCaqui100 px-2 py-1 rounded-full transition-all cursor-pointer flex items-center justify-center gap-2 border-2 border-chikBrown200'
-              href='/dummypdf.pdf'
+              href={menuPDF}
               download
             >
             <ArrowDownTrayIcon className='size-5 text-chikBrown300'/>
