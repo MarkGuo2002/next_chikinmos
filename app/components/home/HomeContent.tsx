@@ -16,7 +16,7 @@ export default function HomeContent(){
                 <div className="md:col-span-1 ">
                     <Image
                         src={dumpling}
-                        className="scale-x-[-1] px-36 md:px-24"
+                        className="scale-x-[-1] px-16 md:px-24"
                         width={1920}
                         height={1080}
                         alt="Home image 1"
@@ -43,7 +43,7 @@ export default function HomeContent(){
                 <div className="order-1 md:order-2 description-container md:col-span-1">
                 <Image
                         src={fried}
-                        className="px-36 md:px-24"
+                        className="px-16 md:px-24"
                         width={1920}
                         height={1080}
                         alt="Home image 1"

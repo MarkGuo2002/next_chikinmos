@@ -34,7 +34,7 @@ export default function Hero(){
                 />
             </div>
             <h2 className="font-normal text-center text-chikBrown100 mb-16">
-                🍗El restaurante coreano mejor <span className="text-chikBrown200 font-bold">#chikin</span> de España<br></br>
+                🍗El restaurante coreano con mejor <span className="text-chikBrown200 font-bold">#chikin</span> de España<br></br>
                             📍Calle General Díaz Porlier 38 28001
             </h2>
 

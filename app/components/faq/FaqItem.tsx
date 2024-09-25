@@ -29,7 +29,7 @@ const FaqItem: React.FC<FaqItemProps> = ({ question, answer }) => {
                     )}
                 </div>
             </div>
-            <div className={`faq-answer overflow-hidden transition-max-height duration-300 ease-in-out ${isExpanded ? 'max-h-60' : 'max-h-0'}`}>
+            <div className={`faq-answer overflow-hidden transition-max-height duration-300 ease-in-out ${isExpanded ? 'max-h-90' : 'max-h-0'}`}>
                 <p className="mt-4">{answer}</p>
             </div>
         </div>

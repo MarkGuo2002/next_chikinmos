@@ -35,9 +35,15 @@ body {
 
 @layer components {
   h1 {
-    @apply text-3xl md:text-5xl font-bold text-chikBrown300;
+    @apply text-3xl md:text-5xl font-bold text-chikBrown300 my-4;
+  }
+  h2 {
+    @apply my-2;
   }
   p{
+    @apply text-chikBrown100 text-base lg:text-lg
+  }
+  ul{
     @apply text-chikBrown100 text-base lg:text-lg
   }
   h2{

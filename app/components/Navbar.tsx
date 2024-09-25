@@ -59,7 +59,7 @@ const Navbar: React.FC = () => {
                 key={link.name}
                 href={link.href}
                 className={`${pathname === link.href ? "bg-chikCaqui100 text-chikBrown100" : "bg-white text-chikCaqui200 hover:bg-chikCaqui100 hover:text-chikBrown100  transition-all"} px-2 py-1 rounded-md`}>
-                  <h2>{link.name}</h2>
+                  <h2 className='my-0'>{link.name}</h2>
               </Link>
               )
             })
@@ -70,7 +70,8 @@ const Navbar: React.FC = () => {
 
       <div className='right-panel flex gap-4 '>
         <a 
-          className="lg:flex items-center justify-center hidden bg-chikCaqui000 gap-2 px-4 py-1 border-2 border-chikBrown100 cursor-pointer rounded-full hover:bg-chikBrown100 transition-all duration-300 ease-in-out text-chikBrown100 hover:text-white group"
+        // MODIFY: when the language stuff is integrated again, Carta should be hidden
+          className="md:mr-10 flex items-center justify-center bg-chikCaqui000 gap-2 px-4 py-1 border-2 border-chikBrown100 cursor-pointer rounded-full hover:bg-chikBrown100 transition-all duration-300 ease-in-out text-chikBrown100 hover:text-white group"
           href={menuPDF}
           download
         >
@@ -78,7 +79,7 @@ const Navbar: React.FC = () => {
           <p className='group-hover:text-white font-bold'>Carta</p>
         </a>
        
-       <LanguageButton />
+       {/* <LanguageButton /> */}
       </div>
       
       { isOpen && (
@@ -90,7 +91,7 @@ const Navbar: React.FC = () => {
               href={link.href}
               className={`${pathname === link.href ? "bg-chikCaqui100 text-chikBrown100" : "bg-white text-chikCaqui200 hover:bg-chikCaqui100 hover:text-chikBrown100  transition-all"} px-2 py-1 rounded-md hover:scale-105`}
               onClick={toggleMenu}>
-              <h2>{link.name}</h2>
+              <h2 className='my-0'>{link.name}</h2>
             </Link>
           ))}
             <a

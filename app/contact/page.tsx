@@ -2,11 +2,15 @@ import RestaurantCard from "../components/contact/RestaurantCard";
 const exampleImagePath = "/images/example.png";
 const deco = "/images/deliciouswings.png";
 
+export const metadata = {
+  title: 'Contacto - Chikinmos',
+  description: 'Ponte en contacto con nosotros en Chikinmos para cualquier consulta.',
+};
 
 export default function Page() {
   return (
-    <div className="flex flex-col items-center w-full gap-4 text-center p-4">
-      <h1 className="title">
+    <div className="flex flex-col items-center w-full gap-4 text-center">
+      <h1>
         Contacta con nosotros
       </h1>
       <p>
