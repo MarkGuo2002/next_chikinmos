@@ -29,7 +29,7 @@ const IdItem : React.FC = () => {
             <div className={`faq-answer overflow-hidden transition-max-height duration-300 ease-in-out ${isExpanded ? 'max-h-100' : 'max-h-0'}`}>
                 <div className="answer-content mt-4">
                     <p>Algunos conoceréis ya a nuestra querida mascota Chic-Chic y para los que no, os dejo su ID:</p>
-                    <div className="px-24 py-12">
+                    <div className="p-2 md:px-24 md:py-12">
                         <Image 
                             src={chichic}
                             className="rounded-lg"
