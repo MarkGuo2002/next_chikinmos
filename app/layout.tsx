@@ -4,6 +4,7 @@ import "./globals.css";
 import BgDecorations from "./components/BgDecorations";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer"
+import { Analytics } from '@vercel/analytics/react';
 
 
 
@@ -34,6 +35,7 @@ export default function RootLayout({
         <Navbar />
         <div className="main-container z-10 py-24 px-4 flex-grow flex justify-center">
           {children}
+          <Analytics />
         </div>
         <Footer />
       
