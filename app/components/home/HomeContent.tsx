@@ -69,7 +69,7 @@ export default function HomeContent(){
                     />
                 </div>
                 <div className="w-2/3">
-                    <p className="text-lg lg:text-3xl text-center font-bold italic text-chikPink200">"¡Chingu, te estamos esperando!"</p>
+                    <p className="text-lg lg:text-3xl text-center font-bold italic text-chikPink200">¡Chingu, te estamos esperando!</p>
                 </div>
             </div>
         </div>
