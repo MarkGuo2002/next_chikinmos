@@ -1,4 +1,10 @@
 import React from 'react'
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Política de privacidad',
+  description: 'Ponte en contacto con nosotros en Chikinmos para cualquier consulta.',
+};
 
 const page = () => {
   return (

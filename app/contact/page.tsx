@@ -1,9 +1,10 @@
+import { Metadata } from "next";
 import RestaurantCard from "../components/contact/RestaurantCard";
-const exampleImagePath = "/images/example.png";
-const deco = "/images/deliciouswings.png";
+const oldchikinmos = "/images/oldchikinmos.png";
+const newchikinmos = "/images/newchikinmos.png";
 
-export const metadata = {
-  title: 'Contacto - Chikinmos',
+export const metadata: Metadata = {
+  title: 'Contacto',
   description: 'Ponte en contacto con nosotros en Chikinmos para cualquier consulta.',
 };
 
@@ -21,21 +22,21 @@ export default function Page() {
         <div className="w-full lg:w-5/12">
           <RestaurantCard
             title="Chikinmos Lista"
-            image={exampleImagePath}
+            image={oldchikinmos}
             address="Calle General Díaz Porlier 38 28001"
-            phone="688 666 666"
-            mail="chik@gmail.com"
+            phone="620788877"
+            mail="chikinspain@gmail.com"
             link="https://www.google.com/maps/place/Chikinmos/@40.4283983,-3.6794126,17z/data=!3m1!4b1!4m6!3m5!1s0xd422930a2d38487:0x3335d0084940135c!8m2!3d40.4283942!4d-3.6768377!16s%2Fg%2F11vjk107ns?entry=ttu"
           />
         </div>
         <div className="w-full lg:w-5/12">
           <RestaurantCard
-            title="Chikinmos Holamundo"
-            image={exampleImagePath}
-            address="Calle muy nuevo 38 28001"
-            phone="688 888 886"
-            mail="chik2@gmail.com"
-            link="https://www.google.com/maps/place/Chikinmos/@40.4283983,-3.6794126,17z/data=!3m1!4b1!4m6!3m5!1s0xd422930a2d38487:0x3335d0084940135c!8m2!3d40.4283942!4d-3.6768377!16s%2Fg%2F11vjk107ns?entry=ttu"
+            title="Chikinmos Ayala"
+            image={newchikinmos}
+            address="Calle de Ayala, 87, Salamanca, 28006 Madrid"
+            phone="676580715"
+            mail="chikinspain@gmail.com"
+            link="https://www.google.com/maps/place/Chikinmos+Ayala/@40.4272783,-3.6751865,17z/data=!3m1!4b1!4m6!3m5!1s0xd4229b48c15988b:0xb14152140d55e536!8m2!3d40.4272749!4d-3.6730213!16s%2Fg%2F11wc6z6588?entry=ttu&g_ep=EgoyMDI0MDkyNS4wIKXMDSoASAFQAw%3D%3D"
           />
         </div>
        

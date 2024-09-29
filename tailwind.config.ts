@@ -23,7 +23,7 @@ const config: Config = {
         chikBrown200:"#472607",
         chikBrown300:"#4E3135",
         chikPink100:"#F7BCAC",
-        chikPink200:"ff8674",
+        chikPink200:"#FF8674",
         gray100:"#FAFAFA",
         gray200:"#F6F6F6",
         gray300:"#A9A9A9",

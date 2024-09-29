@@ -34,8 +34,10 @@ export default function Hero(){
                 />
             </div>
             <h2 className="font-normal text-center text-chikBrown100 mb-16">
-                🍗El restaurante coreano con mejor <span className="text-chikBrown200 font-bold">#chikin</span> de España<br></br>
-                            📍Calle General Díaz Porlier 38 28001
+                <span className="text-3xl font-bold">🍗El restaurante coreano con mejor <span className="text-chikBrown200 font-bold">#chikin</span> de España<br></br></span>
+                <br></br>
+                            📍Calle General Díaz Porlier 38 28001 <br></br>
+                            📍Calle de Ayala, 87, Salamanca, 28006 Madrid
             </h2>
 
             {/* hello */}

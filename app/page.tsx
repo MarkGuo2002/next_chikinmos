@@ -1,8 +1,9 @@
+import { Metadata } from "next";
 import Hero from "./components/home/Hero";
 import HomeContent from "./components/home/HomeContent";
 
-export const metadata = {
-    title: 'Chikinmos - Tu Restaurante de Pollo Frito Coreano',
+export const metadata: Metadata = {
+    title: 'Chikinmos',
     description: 'Descubre el mejor pollo frito coreano en Chikinmos. ¡Visítanos en Madrid!',
 };
 

@@ -1,4 +1,5 @@
 import FaqItem from "../components/faq/FaqItem";
+import IdItem from "../components/faq/IdItem";
 import SpecialFlavoursFaq from "../components/faq/SpecialFlavoursFaq";
 
 export const metadata = {
@@ -10,9 +11,6 @@ const qalist = [
     {   id:1,
         question: "¿Qué es Chikinmos?",
         answer: "Somos un pequeño restaurante especializado en pollo frito coreano que empezó su aventura en diciembre de 2023 en un acogedor local en el barrio de Salamanca, Madrid. Actualmente ya contamos con 2 restaurantes, respectivamente en General Díaz Porlier y Ayala, para que nuestros clientes puedan disfrutar en todo momento de su favorita tapa coreana."},
-    {   id:2,
-        question: "¿Quién es Chic-Chic?",
-        answer: "Algunos conoceréis ya a nuestra querida mascota Chic-Chic y para los que no, os dejo su ID."},
     {   id:3,
         question: "¿Qué tiene de diferente el pollo frito coreano?",
         answer: "Muchos se preguntarán por qué hace falta remarcar que es coreano, ¿vale la pena ir teniendo un KFC o un Popeyes en la puerta de casa? Los amantes de K-dramas sabrán que en Corea el pollo frito, llamado Chikin, es conocido por su especial fritura para ser acompañada con una salsa, lo que le aporta un toque creativo ya que tienes innumerables sabores entre los que elegir. En Chikinmos tenemos actualmente 9 salsas diferentes a degustar y estamos en constante proceso de innovación para traerte nuevas experiencias gastronómicas."},
@@ -58,6 +56,7 @@ export default function Page() {
                     })
                 }
                 <SpecialFlavoursFaq />
+                <IdItem />
             </div>
             
 
