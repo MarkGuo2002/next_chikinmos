@@ -12,7 +12,7 @@ import {
   Bars3Icon,
   ArrowDownTrayIcon
 } from '@heroicons/react/24/outline';
-import LanguageButton from './LanguageButton';
+//import LanguageButton from './LanguageButton';
 
 
 const menuPDF = "/menu.pdf"
