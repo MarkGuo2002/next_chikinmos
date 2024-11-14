@@ -2,7 +2,8 @@ import { ArrowLongDownIcon } from "@heroicons/react/24/outline";
 import ImageContainer from "../ImageContainer";
 import Image from "next/image";
 
-const exampleImagePath = "/images/example.png";
+const exampleImagePath = "/images/chikin-env.JPG";
+const chikin2 = "/images/pollo.png";
 const fried = "/decorations/fried-chicken.png";
 const dumpling = "/decorations/dumplings.png";
 const spicy = "/images/hothothot.png";
@@ -13,14 +14,15 @@ export default function HomeContent(){
     return(
         <div className="w-full flex flex-col gap-24 items-center justify-center px-2 lg:px-32">
             <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-12 h-auto items-stretch">
-                <div className="md:col-span-1 ">
+                <div className="md:col-span-1 rounded-3xl px-4 md:px-24 ">
                     <Image
-                        src={dumpling}
-                        className="scale-x-[-1] px-16 md:px-24"
+                        src={chikin2}
+                        className="rounded-xl shadow-xl"
                         width={1920}
                         height={1080}
                         alt="Home image 1"
                     />
+                    <p className="subtitle">Chikins</p>
                 </div>
                 <div className="description-container md:col-span-2 h-full">
                     <h2 className="text-chikPink200 italic">Si comemos pollo frito...</h2>
@@ -43,14 +45,15 @@ export default function HomeContent(){
                     <p className="font-bold italic">El sabor que te hace volver, ¡Adicción a Chikinmos!</p>
 
                 </div>
-                <div className="order-1 md:order-2 description-container md:col-span-1">
-                <Image
-                        src={fried}
-                        className="px-16 md:px-24"
+                <div className="order-1 md:order-2 description-container md:col-span-1 px-4 md:px-24">
+                    <Image
+                        src={exampleImagePath}
+                        className="rounded-xl shadow-xl"
                         width={1920}
                         height={1080}
                         alt="Home image 1"
                     />
+                    <p className="subtitle">Local en Chikinmos Ayala</p>
                 </div>
             </div>
             <div>

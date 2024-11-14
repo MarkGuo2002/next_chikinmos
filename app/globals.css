@@ -50,7 +50,7 @@ body {
     @apply text-chikBrown200 text-xl lg:text-2xl font-bold
   }
   .subtitle{
-    @apply text-chikCaqui200 italic text-center mt-4
+    @apply text-chikCaqui200 italic text-center mt-2
    }
   .absolute-center{
     @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
