@@ -49,33 +49,60 @@ export default function Hero(){
                 <ArrowDownTrayIcon className="size-6" />
                 <p className="group-hover:text-white font-bold text-xl">Descarga nuestra carta</p>
             </a>
-
-            
-
-            <div className="timetable-container my-12 max-w-xl h-auto flex flex-col items-center">
-                <div className="flex items-center gap-2">
-                    <CalendarIcon className="icon-css" />
-                    <h2 className="text-black">Horario</h2>
-                </div>
-
-                <div className="flex gap-12 md:gap-36 mt-2">
-                    <div className="max-w-md flex flex-col justify-between text-left">
-                        <p>Lunes</p>
-                        <p>Martes</p>
-                        <p>Miércoles</p>
-                        <p>Jueves</p>
-                        <p>Viernes</p>
-                        <p>Sábado</p>
-                        <p>Domingo</p>
+     
+            <div className="two-timetables w-full flex flex-col lg:flex-row justify-around items-center">
+                <div className="timetable-container my-12 max-w-xl h-auto flex flex-col items-center">
+                    <div className="flex items-center gap-2">
+                        <CalendarIcon className="icon-css" />
+                        <h2 className="text-black">Horario Chikinmos Lista</h2>
                     </div>
-                    <div className="max-w-4xl flex flex-col justify-between text-right">
-                        <p>Cerrado</p>
-                        <p>13:00-17:00; 19:00-23:00</p>
-                        <p>13:00-17:00; 19:00-23:00</p>
-                        <p>13:00-17:00; 19:00-23:00</p>
-                        <p>13:00-23:00</p>
-                        <p>13:00-23:00</p>
-                        <p>13:00-23:00</p>
+
+                    <div className="flex gap-12 md:gap-36 mt-2">
+                        <div className="max-w-md flex flex-col justify-between text-left">
+                            <p>Lunes</p>
+                            <p>Martes</p>
+                            <p>Miércoles</p>
+                            <p>Jueves</p>
+                            <p>Viernes</p>
+                            <p>Sábado</p>
+                            <p>Domingo</p>
+                        </div>
+                        <div className="max-w-4xl flex flex-col justify-between text-right">
+                            <p>Cerrado</p>
+                            <p>13:00-17:00; 19:00-23:00</p>
+                            <p>13:00-17:00; 19:00-23:00</p>
+                            <p>13:00-17:00; 19:00-23:00</p>
+                            <p>13:00-23:00</p>
+                            <p>13:00-23:00</p>
+                            <p>13:00-23:00</p>
+                        </div>
+                    </div>
+                </div>
+                <div className="timetable-container my-12 max-w-xl h-auto flex flex-col items-center">
+                    <div className="flex items-center gap-2">
+                        <CalendarIcon className="icon-css" />
+                        <h2 className="text-black">Horario Chikinmos Ayala</h2>
+                    </div>
+
+                    <div className="flex gap-12 md:gap-36 mt-2">
+                        <div className="max-w-md flex flex-col justify-between text-left">
+                            <p>Lunes</p>
+                            <p>Martes</p>
+                            <p>Miércoles</p>
+                            <p>Jueves</p>
+                            <p>Viernes</p>
+                            <p>Sábado</p>
+                            <p>Domingo</p>
+                        </div>
+                        <div className="max-w-4xl flex flex-col justify-between text-right">
+                            <p>13:00-17:00; 19:00-23:00</p>
+                            <p>Cerrado</p>
+                            <p>13:00-17:00; 19:00-23:00</p>
+                            <p>13:00-17:00; 19:00-23:00</p>
+                            <p>13:00-23:00</p>
+                            <p>13:00-23:00</p>
+                            <p>13:00-23:00</p>
+                        </div>
                     </div>
                 </div>
             </div>
