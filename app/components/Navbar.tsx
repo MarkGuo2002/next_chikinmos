@@ -14,7 +14,9 @@ import {
 } from '@heroicons/react/24/outline';
 //import LanguageButton from './LanguageButton';
 
+import { CalendarDaysIcon } from "@heroicons/react/24/outline"
 
+const bookingURL = "https://bookings.last.app/fe502f3f-5147-418f-872b-9cf4acad4863/booking"
 const menuPDF = "/menu.pdf"
 
 const links = [
@@ -71,13 +73,23 @@ const Navbar: React.FC = () => {
       <div className='right-panel flex gap-4 '>
         <a 
         // MODIFY: when the language stuff is integrated again, Carta should be hidden
-          className="md:mr-10 flex items-center justify-center bg-chikCaqui000 gap-2 px-4 py-1 border-2 border-chikBrown100 cursor-pointer rounded-full hover:bg-chikBrown100 transition-all duration-300 ease-in-out text-chikBrown100 hover:text-white group"
+          className="flex items-center justify-center bg-chikCaqui000 gap-2 px-4 py-1 border-2 border-chikBrown100 cursor-pointer rounded-full hover:bg-chikBrown100 transition-all duration-300 ease-in-out text-chikBrown100 hover:text-white group"
           href={menuPDF}
           download
         >
           <ArrowDownTrayIcon className='size-5'/>
           <p className='group-hover:text-white font-bold'>Carta</p>
         </a>
+        <a 
+        // MODIFY: when the language stuff is integrated again, Carta should be hidden
+          className="md:mr-4 hidden md:flex items-center justify-center bg-chikCaqui000 gap-2 px-4 py-1 border-2 border-chikBrown100 cursor-pointer rounded-full hover:bg-chikBrown100 transition-all duration-300 ease-in-out text-chikBrown100 hover:text-white group"
+          href={bookingURL}
+          target="_blank" rel="noopener noreferrer"
+        >
+          <CalendarDaysIcon className='size-5'/>
+          <p className='group-hover:text-white font-bold'>Reservar</p>
+        </a>
+       
        
        {/* <LanguageButton /> */}
       </div>
@@ -101,6 +113,15 @@ const Navbar: React.FC = () => {
             >
             <ArrowDownTrayIcon className='size-5 text-chikBrown300'/>
             <p className='text-chikBrown300 hover:text-chikBrown100 text-xl font-bold'>Nuestra Carta </p>
+          </a>
+
+          <a
+              href={bookingURL}
+              target="_blank" rel="noopener noreferrer"
+              className="hover:bg-chikCaqui200 bg-chikCaqui100 px-2 py-1 rounded-full transition-all cursor-pointer flex items-center justify-center gap-2 border-2 border-chikBrown200"
+          >
+              <CalendarDaysIcon className="size-5 text-chikBrown300" />
+              <p className="text-chikBrown300 hover:text-chikBrown100 text-xl font-bold">Reserva para Chikinmos Ayala</p>
           </a>
         </ul>
       </div>

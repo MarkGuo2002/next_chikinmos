@@ -1,6 +1,8 @@
 import Image from "next/image"
 import { CalendarIcon, ChevronDownIcon, ArrowDownTrayIcon } from "@heroicons/react/24/solid"
+import { CalendarDaysIcon } from "@heroicons/react/24/outline"
 
+const bookingURL = "https://bookings.last.app/fe502f3f-5147-418f-872b-9cf4acad4863/booking"
 //pdf file location
 const menuPDF = "/menu.pdf"
 
@@ -33,22 +35,37 @@ export default function Hero(){
                     height={1097}
                 />
             </div>
-            <h2 className="font-normal text-center text-chikBrown100 mb-16">
+            <h2 className="font-normal text-center text-chikBrown100 mb-8">
                 <span className="text-3xl font-bold">🍗El restaurante coreano con mejor <span className="text-chikBrown200 font-bold">#chikin</span> de España<br></br></span>
                 <br></br>
                             📍Calle General Díaz Porlier 38 28001 <br></br>
                             📍Calle de Ayala, 87, Salamanca, 28006 Madrid
+                <br></br>
+                <div className="bg-chikPink200 mx-8 py-2 rounded-xl text-white font-bold mt-4">🆕¡Ahora ya puedes hacer reservas para Chikinmos Ayala!</div>
             </h2>
 
-            {/* hello */}
-            <a
-                href={menuPDF}
-                download
-                className="flex items-center justify-center bg-chikCaqui000 gap-2 px-6 py-4 border-2 border-chikBrown100 cursor-pointer rounded-xl hover:bg-chikBrown100 transition-all duration-300 ease-in-out text-chikBrown100 hover:text-white group"
-            >
-                <ArrowDownTrayIcon className="size-6" />
-                <p className="group-hover:text-white font-bold text-xl">Descarga nuestra carta</p>
-            </a>
+            
+
+            {/* hello  */}
+            <div className="flex gap-8 md:flex-row flex-col ">
+                <a
+                    href={menuPDF}
+                    download
+                    className="flex items-center justify-center bg-chikCaqui000 gap-2 px-6 py-4 border-2 border-chikBrown100 cursor-pointer rounded-xl hover:bg-chikBrown100 transition-all duration-300 ease-in-out text-chikBrown100 hover:text-white group"
+                >
+                    <ArrowDownTrayIcon className="size-6" />
+                    <p className="group-hover:text-white font-bold text-xl">Descarga nuestra carta</p>
+                </a>
+                <a
+                    href={bookingURL}
+                    target="_blank" rel="noopener noreferrer"
+                    className="flex items-center justify-center bg-chikCaqui000 gap-2 px-6 py-4 border-2 border-chikBrown100 cursor-pointer rounded-xl hover:bg-chikBrown100 transition-all duration-300 ease-in-out text-chikBrown100 hover:text-white group"
+                >
+                    <CalendarDaysIcon className="size-6" />
+                    <p className="group-hover:text-white font-bold text-xl">Reserva para Chikinmos Ayala</p>
+                </a>
+            </div>
+                
      
             <div className="two-timetables w-full flex flex-col lg:flex-row justify-around items-center">
                 <div className="timetable-container my-12 max-w-xl h-auto flex flex-col items-center">

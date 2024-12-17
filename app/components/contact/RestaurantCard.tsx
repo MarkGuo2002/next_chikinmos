@@ -39,8 +39,6 @@ const RestaurantCard: React.FC<RestaurantCardProps> = ({ title, image, address, 
                         h={1080}
                     />
                 </div>
-
-
             </a>
             <div className="additional-info-container flex flex-col justify-start gap-4 text-chikBrown200 text-base lg:text-xl">
                 <div className="address-item flex gap-6 items-center">
