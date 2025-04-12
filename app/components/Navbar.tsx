@@ -16,7 +16,7 @@ import {
 
 import { CalendarDaysIcon } from "@heroicons/react/24/outline"
 
-const bookingURL = "https://bookings.last.app/fe502f3f-5147-418f-872b-9cf4acad4863/booking"
+const bookingURL = "https://widget.thefork.com/ebab8e41-1577-4ee8-ae43-aa67212a58a9"
 const menuPDF = "/menu.pdf"
 
 const links = [
