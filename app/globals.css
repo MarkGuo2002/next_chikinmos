@@ -41,7 +41,7 @@ body {
     @apply my-2;
   }
   p{
-    @apply text-chikBrown100 text-base lg:text-lg
+    @apply text-chikBrown100 text-base
   }
   ul{
     @apply text-chikBrown100 text-base lg:text-lg
