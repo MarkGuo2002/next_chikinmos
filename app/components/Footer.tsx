@@ -8,7 +8,7 @@ export default function Footer(){
                 <p>•</p>
                 <FooterLink link="/legal-notice" text="Aviso Legal" />
             </div>
-            <p className="text-gray300">©️ Chikinmos 2024 </p>
+            <p className="text-gray300"> Chikinmos 2025 </p>
         </div>
     )
 }

@@ -75,7 +75,7 @@ const Navbar: React.FC = () => {
         // MODIFY: when the language stuff is integrated again, Carta should be hidden
           className="flex items-center justify-center bg-chikCaqui000 gap-2 px-4 py-1 border-2 border-chikBrown100 cursor-pointer rounded-full hover:bg-chikBrown100 transition-all duration-300 ease-in-out text-chikBrown100 hover:text-white group"
           href={menuPDF}
-          download
+          target="_blank" rel="noopener noreferrer"
         >
           <ArrowDownTrayIcon className='size-5'/>
           <p className='group-hover:text-white font-bold'>Carta</p>
@@ -109,7 +109,7 @@ const Navbar: React.FC = () => {
             <a
               className='hover:bg-chikCaqui200 bg-chikCaqui100 px-2 py-1 rounded-full transition-all cursor-pointer flex items-center justify-center gap-2 border-2 border-chikBrown200'
               href={menuPDF}
-              download
+              target="_blank" rel="noopener noreferrer"
             >
             <ArrowDownTrayIcon className='size-5 text-chikBrown300'/>
             <p className='text-chikBrown300 hover:text-chikBrown100 text-xl font-bold'>Nuestra Carta </p>
