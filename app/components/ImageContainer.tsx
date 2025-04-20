@@ -2,7 +2,7 @@ import Image, { StaticImageData } from 'next/image';
 
 type Side = "tr" | "tl" | "br" | "bl";
 
-interface ImageContainerProps {
+type ImageContainerProps = {
     src: string | StaticImageData;
     w: number;
     h: number;
@@ -11,14 +11,7 @@ interface ImageContainerProps {
     alt: string;
 }
 
-const ImageContainer: React.FC<ImageContainerProps> = ({
-    src,
-    w,
-    h,
-    decoration = null,
-    side = null,
-    alt = "Default alt"
-}) => {
+export default function ImageContainer({ src, w, h, decoration, side = "tr", alt = "Default alt" }: ImageContainerProps) {
     let position;
     switch (side){
         case 'tr':
@@ -63,4 +56,3 @@ const ImageContainer: React.FC<ImageContainerProps> = ({
     );
 };
 
-export default ImageContainer;
