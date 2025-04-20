@@ -7,7 +7,7 @@ import { AnimatePresence, motion } from "framer-motion";
 const SCROLLPHOTOS = [
   { src: "/images/pollo.png", alt: "Pollo" },
   { src: "/images/chikins.jpg", alt: "Chikins" },
-  { src: "/images/chikin-env.JPG", alt: "shop" },
+  { src: "/images/chikin-env.jpg", alt: "shop" },
   { src: "/images/sushi2.jpg", alt: "Sushi 2" },
   { src: "/images/gyoza.jpg", alt: "Gyoza" },
   { src: "/images/chikin-env2.png", alt: "shop 2" },
