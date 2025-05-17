@@ -16,8 +16,9 @@ import {
 
 import { CalendarDaysIcon } from "@heroicons/react/24/outline"
 
-const bookingURL = "https://widget.thefork.com/ebab8e41-1577-4ee8-ae43-aa67212a58a9"
-const menuPDF = "/menu.pdf"
+const AYALA_BOOK_URL = "https://widget.thefork.com/ebab8e41-1577-4ee8-ae43-aa67212a58a9";
+const MENUPDF = "/menu.pdf";
+const LISTA_BOOK_URL = "https://bookings.last.app/756ba54a-7854-4276-bb4c-f2c5d46bbbb0/booking";
 
 const links = [
   { name: 'Inicio', href: '/'}, 
@@ -72,22 +73,28 @@ const Navbar: React.FC = () => {
 
       <div className='right-panel flex gap-4 '>
         <a 
-        // MODIFY: when the language stuff is integrated again, Carta should be hidden
-          className="flex items-center justify-center bg-chikCaqui000 gap-2 px-4 py-1 border-2 border-chikBrown100 cursor-pointer rounded-full hover:bg-chikBrown100 transition-all duration-300 ease-in-out text-chikBrown100 hover:text-white group"
-          href={menuPDF}
+          className="md:mr-4 flex items-center justify-center bg-chikCaqui000 gap-2 px-4 py-1 border-2 border-chikBrown100 cursor-pointer rounded-full hover:bg-chikBrown100 transition-all duration-300 ease-in-out text-chikBrown100 hover:text-white group"
+          href={MENUPDF}
           target="_blank" rel="noopener noreferrer"
         >
           <ArrowDownTrayIcon className='size-5'/>
           <p className='group-hover:text-white font-bold'>Carta</p>
         </a>
         <a 
-        // MODIFY: when the language stuff is integrated again, Carta should be hidden
-          className="md:mr-4 hidden md:flex items-center justify-center bg-chikCaqui000 gap-2 px-4 py-1 border-2 border-chikBrown100 cursor-pointer rounded-full hover:bg-chikBrown100 transition-all duration-300 ease-in-out text-chikBrown100 hover:text-white group"
-          href={bookingURL}
+          className="hidden md:flex items-center justify-center bg-chikCaqui000 gap-2 px-4 py-1 border-2 border-chikBrown100 cursor-pointer rounded-full hover:bg-chikBrown100 transition-all duration-300 ease-in-out text-chikBrown100 hover:text-white group"
+          href={AYALA_BOOK_URL}
           target="_blank" rel="noopener noreferrer"
         >
           <CalendarDaysIcon className='size-5'/>
-          <p className='group-hover:text-white font-bold'>Reservar</p>
+          <p className='group-hover:text-white font-bold'>Reservar Ayala</p>
+        </a>
+        <a 
+          className="md:mr-4 hidden md:flex items-center justify-center bg-chikCaqui000 gap-2 px-4 py-1 border-2 border-chikBrown100 cursor-pointer rounded-full hover:bg-chikBrown100 transition-all duration-300 ease-in-out text-chikBrown100 hover:text-white group"
+          href={LISTA_BOOK_URL}
+          target="_blank" rel="noopener noreferrer"
+        >
+          <CalendarDaysIcon className='size-5'/>
+          <p className='group-hover:text-white font-bold'>Reservar Lista</p>
         </a>
        
        
@@ -108,7 +115,7 @@ const Navbar: React.FC = () => {
           ))}
             <a
               className='hover:bg-chikCaqui200 bg-chikCaqui100 px-2 py-1 rounded-full transition-all cursor-pointer flex items-center justify-center gap-2 border-2 border-chikBrown200'
-              href={menuPDF}
+              href={MENUPDF}
               target="_blank" rel="noopener noreferrer"
             >
             <ArrowDownTrayIcon className='size-5 text-chikBrown300'/>
@@ -116,12 +123,21 @@ const Navbar: React.FC = () => {
           </a>
 
           <a
-              href={bookingURL}
+              href={AYALA_BOOK_URL}
               target="_blank" rel="noopener noreferrer"
               className="hover:bg-chikCaqui200 bg-chikCaqui100 px-2 py-1 rounded-full transition-all cursor-pointer flex items-center justify-center gap-2 border-2 border-chikBrown200"
           >
               <CalendarDaysIcon className="size-5 text-chikBrown300" />
-              <p className="text-chikBrown300 hover:text-chikBrown100 text-xl font-bold">Reserva para Chikinmos Ayala</p>
+              <p className="text-chikBrown300 hover:text-chikBrown100 text-xl font-bold">Reserva Chikinmos Ayala</p>
+          </a>
+
+          <a
+              href={LISTA_BOOK_URL}
+              target="_blank" rel="noopener noreferrer"
+              className="hover:bg-chikCaqui200 bg-chikCaqui100 px-2 py-1 rounded-full transition-all cursor-pointer flex items-center justify-center gap-2 border-2 border-chikBrown200"
+          >
+              <CalendarDaysIcon className="size-5 text-chikBrown300" />
+              <p className="text-chikBrown300 hover:text-chikBrown100 text-xl font-bold">Reserva Chikinmos Lista</p>
           </a>
         </ul>
       </div>

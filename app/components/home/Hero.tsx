@@ -2,9 +2,9 @@ import Image from "next/image"
 import { CalendarIcon, ChevronDownIcon, ArrowDownTrayIcon } from "@heroicons/react/24/solid"
 import { CalendarDaysIcon } from "@heroicons/react/24/outline"
 
-const bookingURL = "https://widget.thefork.com/ebab8e41-1577-4ee8-ae43-aa67212a58a9"
-//pdf file location
-const menuPDF = "/menu.pdf"
+const AYALA_BOOK_URL = "https://widget.thefork.com/ebab8e41-1577-4ee8-ae43-aa67212a58a9";
+const MENUPDF = "/menu.pdf";
+const LISTA_BOOK_URL = "https://bookings.last.app/756ba54a-7854-4276-bb4c-f2c5d46bbbb0/booking";
 
 
 export default function Hero(){
@@ -41,28 +41,37 @@ export default function Hero(){
                             📍Calle General Díaz Porlier 38 28001 <br></br>
                             📍Calle de Ayala, 87, Salamanca, 28006 Madrid
                 <br></br>
-                <div className="bg-chikPink200 mx-8 py-2 rounded-xl text-white font-bold mt-4">🆕¡Ahora ya puedes hacer reservas para Chikinmos Ayala!</div>
+                <div className="bg-chikPink200 mx-8 p-2 rounded-xl text-white font-bold mt-4">🆕¡Ahora TAMBIÉN puedes hacer reservas para Chikinmos Lista!</div>
             </h2>
 
             
-
-            {/* hello  */}
-            <div className="flex gap-8 md:flex-row flex-col ">
+            <div className="flex gap-4 md:flex-row flex-col ">
                 <a
-                    href={menuPDF}
+                    href={LISTA_BOOK_URL}
                     target="_blank" rel="noopener noreferrer"
                     className="flex items-center justify-center bg-chikCaqui000 gap-2 px-6 py-4 border-2 border-chikBrown100 cursor-pointer rounded-xl hover:bg-chikBrown100 transition-all duration-300 ease-in-out text-chikBrown100 hover:text-white group"
                 >
-                    <ArrowDownTrayIcon className="size-6" />
-                    <p className="group-hover:text-white font-bold text-xl">Descarga nuestra carta</p>
+                    <CalendarDaysIcon className="size-6" />
+                    <p className="group-hover:text-white font-bold text-xl">Reserva para Chikinmos Lista</p>
                 </a>
                 <a
-                    href={bookingURL}
+                    href={AYALA_BOOK_URL}
                     target="_blank" rel="noopener noreferrer"
                     className="flex items-center justify-center bg-chikCaqui000 gap-2 px-6 py-4 border-2 border-chikBrown100 cursor-pointer rounded-xl hover:bg-chikBrown100 transition-all duration-300 ease-in-out text-chikBrown100 hover:text-white group"
                 >
                     <CalendarDaysIcon className="size-6" />
                     <p className="group-hover:text-white font-bold text-xl">Reserva para Chikinmos Ayala</p>
+                </a>
+            </div>
+
+            <div className="flex gap-8 md:flex-row flex-col mt-4">
+                <a
+                    href={MENUPDF}
+                    target="_blank" rel="noopener noreferrer"
+                    className="flex items-center justify-center bg-chikCaqui100 gap-2 px-6 py-4 border-2 border-chikBrown100 cursor-pointer rounded-xl hover:bg-chikBrown100 transition-all duration-300 ease-in-out text-chikBrown100 hover:text-white group"
+                >
+                    <ArrowDownTrayIcon className="size-6" />
+                    <p className="group-hover:text-white font-bold text-xl">Descargar carta</p>
                 </a>
             </div>
                 
