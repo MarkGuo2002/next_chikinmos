@@ -4,7 +4,7 @@ import { CalendarDaysIcon } from "@heroicons/react/24/outline"
 
 const AYALA_BOOK_URL = "https://widget.thefork.com/ebab8e41-1577-4ee8-ae43-aa67212a58a9";
 const MENUPDF = "/menu.pdf";
-const LISTA_BOOK_URL = "https://bookings.last.app/756ba54a-7854-4276-bb4c-f2c5d46bbbb0/booking";
+const LISTA_BOOK_URL = "https://www.covermanager.com/reservation/module_restaurant/chikinmos-listas/spanish";
 
 
 export default function Hero(){
